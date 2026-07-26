@@ -1,0 +1,277 @@
+:root {
+    --bg-color: #fcfcfc;
+    --text-primary: #111111;
+    --text-secondary: #555555;
+    --accent: #222222;
+    --border-color: #eaeaea;
+    --tag-bg: #f4f4f4;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    display: flex;
+    line-height: 1.6;
+}
+
+/* Sidebar Layout */
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 3rem 2rem;
+    border-right: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .logo {
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 3rem;
+    letter-spacing: -0.5px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 1.25rem;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.sidebar ul li a:hover {
+    color: var(--text-primary);
+}
+
+/* Main Content Area */
+.content {
+    margin-left: 260px;
+    padding: 5rem 10% 5rem 10%;
+    max-width: 1100px;
+    width: calc(100% - 260px);
+}
+
+section {
+    padding: 4rem 0;
+}
+
+.section-tag {
+    display: block;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 1.15;
+    margin-bottom: 2rem;
+    letter-spacing: -1.5px;
+}
+
+h1 em {
+    font-style: italic;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    margin-bottom: 2rem;
+}
+
+h2 em {
+    font-style: italic;
+}
+
+p {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+    max-width: 700px;
+}
+
+.bio-lead {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    margin-bottom: 2.5rem;
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid var(--border-color);
+    margin: 2rem 0;
+}
+
+/* UI Elements & Buttons */
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.btn.primary {
+    background-color: var(--accent);
+    color: white;
+}
+
+.btn.secondary {
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+.btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+/* Experience Timeline */
+.timeline-item {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+}
+
+.job-tag {
+    font-size: 0.75rem;
+    background-color: var(--tag-bg);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+    color: #333;
+}
+
+.timeline-item h3 {
+    margin-top: 0.75rem;
+    font-size: 1.35rem;
+}
+
+.company {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+/* Skills Tags */
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.skills-tags span {
+    font-size: 0.8rem;
+    background: var(--tag-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+/* Projects elements */
+.project-card {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    padding: 2.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.project-meta {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.project-links a {
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+/* Contact layout */
+.email-link {
+    font-size: 2rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.social-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+}
+
+footer {
+    padding-top: 3rem;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+/* Responsive Rules for Mobile Screens */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 2rem;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+    }
+    .sidebar .logo {
+        margin-bottom: 1rem;
+    }
+    .sidebar ul {
+        display: flex;
+        gap: 1rem;
+    }
+    .content {
+        margin-left: 0;
+        width: 100%;
+        padding: 2rem;
+    }
+    h1 {
+        font-size: 2.25rem;
+    }
+}
