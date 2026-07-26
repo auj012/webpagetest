@@ -26,6 +26,17 @@ body {
 }
 
 /* Sidebar Layout */
+
+/* Profile Picture Styling */
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Makes the image a perfect circle */
+    object-fit: cover; /* Prevents the image from stretching */
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--border-color);
+}
+
 .sidebar {
     width: 260px;
     height: 100vh;
